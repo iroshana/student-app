@@ -1,0 +1,6 @@
+<button (click)="createStudent()">Create Student</button>
+<ul>
+    <li *ngFor="let student of studentList; let i = index">
+      {{ i + 1 }} - {{ student.firstName }} {{ student.lastName }}  <button (click)="studentDetails(student.id)">View</button>
+    </li>
+  </ul>

@@ -1,0 +1,10 @@
+<form [formGroup]="regForm">
+    First Name - <span *ngIf="isViewForm">{{student.firstName}}</span>
+    <input type="text" formControlName="firstName" *ngIf="!isViewForm" required>
+    <br>
+    Last Name - <span *ngIf="isViewForm">{{student.lastName}}</span>
+    <input type="text" formControlName="lastName" *ngIf="!isViewForm" required>
+    <br>
+    <button (click)="backToList()">Back</button> 
+    <button type="submit" (click)="saveStudent()" *ngIf="!isViewForm">Save</button>
+</form>
